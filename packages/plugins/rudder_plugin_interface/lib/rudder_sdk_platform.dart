@@ -7,7 +7,7 @@ abstract class RudderSdkPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static RudderSdkPlatform _instance = MethodChannelRudderSdk();
+  static RudderSdkPlatform _instance = MethodChannelRudderSdk() as RudderSdkPlatform;
 
   /// Platform-specific plugins should set this with their own platform-specific
   /// class that extends [UrlLauncherPlatform] when they register themselves.
@@ -21,10 +21,8 @@ abstract class RudderSdkPlatform extends PlatformInterface {
   /// Defaults to [MethodChannelRudderSdk].
   static RudderSdkPlatform get instance => _instance;
 
-  void initialize(String writeKey,
-      {RudderConfig? config, RudderOption? options}) {
-    throw UnimplementedError(
-        'initialize(String writeKey,{RudderConfig? config, '
+  void initialize(String writeKey, {RudderConfig? config, RudderOption? options}) {
+    throw UnimplementedError('initialize(String writeKey,{RudderConfig? config, '
         'RudderOption? options}) has not been implemented.');
   }
 
@@ -33,28 +31,23 @@ abstract class RudderSdkPlatform extends PlatformInterface {
         'RudderOption? options}) has not been implemented.');
   }
 
-  void track(String eventName,
-      {RudderProperty? properties, RudderOption? options}) {
-    throw UnimplementedError(
-        'track(String eventName,{RudderProperty? properties, '
+  void track(String eventName, {RudderProperty? properties, RudderOption? options}) {
+    throw UnimplementedError('track(String eventName,{RudderProperty? properties, '
         'RudderOption? options}) has not been implemented.');
   }
 
-  void screen(String screenName,
-      {String? category, RudderProperty? properties, RudderOption? options}) {
+  void screen(String screenName, {String? category, RudderProperty? properties, RudderOption? options}) {
     throw UnimplementedError(
         'screen(String screenName,{RudderProperty? properties, RudderOption? options}) has not been implemented.');
   }
 
-  void group(String groupId,
-      {RudderTraits? groupTraits, RudderOption? options}) {
+  void group(String groupId, {RudderTraits? groupTraits, RudderOption? options}) {
     throw UnimplementedError('group(String groupId,{RudderTraits? groupTraits, '
         'RudderOption? options}) has not been implemented.');
   }
 
   void alias(String newId, {RudderOption? options}) {
-    throw UnimplementedError(
-        'alias(String newId, {RudderOption? options}) has not been implemented.');
+    throw UnimplementedError('alias(String newId, {RudderOption? options}) has not been implemented.');
   }
 
   /*void load(String writeKey, String dataPlaneUrl) {
@@ -70,18 +63,15 @@ abstract class RudderSdkPlatform extends PlatformInterface {
   }
 
   void putDeviceToken(String deviceToken) {
-    throw UnimplementedError(
-        'putDeviceToken(String deviceToken) has not been implemented.');
+    throw UnimplementedError('putDeviceToken(String deviceToken) has not been implemented.');
   }
 
   void putAdvertisingId(String advertisingId) {
-    throw UnimplementedError(
-        'putAdvertisingId(String advertisingId) has not been implemented.');
+    throw UnimplementedError('putAdvertisingId(String advertisingId) has not been implemented.');
   }
 
   void putAnonymousId(String anonymousId) {
-    throw UnimplementedError(
-        'putAnonymousId(String anonymousId) has not been implemented.');
+    throw UnimplementedError('putAnonymousId(String anonymousId) has not been implemented.');
   }
 
   Future<Map?> getRudderContext() async {

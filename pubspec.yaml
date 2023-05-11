@@ -16,7 +16,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  rudder_sdk_flutter: 2.3.1
+  rudder_sdk_flutter: 
+    path: 'packages/plugins/rudder_plugin'
   rudder_integration_amplitude_flutter: 1.0.3
   rudder_integration_firebase_flutter: 2.0.2
   rudder_integration_braze_flutter: 1.0.3
